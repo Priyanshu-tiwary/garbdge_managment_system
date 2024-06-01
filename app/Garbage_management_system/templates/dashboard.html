@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background:url(img.jpg) no-repeat;
+            backdrop-filter: blur(10px);
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #333;
+            background: url(uppward.jpg);
+            color: blue;
+            padding: 90px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .dashboard-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .dashboard-card {
+            width: 200px;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid blue;
+            background-color: orange;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h6>.</h6>
+    </header>
+    <center>
+    <ur>
+        <h2>Admin Dashboard</h2>
+    </ur>
+    </center>    
+    <div class="dashboard-container">
+        <div class="dashboard-card">
+            <h2>New Complaints</h2>
+            <p>Total: </p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Assigned Complaints</h2>
+            <p>Total: </p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Rejected Complaints</h2>
+            <p>Total: 0</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Completed Complaints</h2>
+            <p>Total: 0</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Total Drivers</h2>
+            <p>Total: 0</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Bin Cleaning In Progress</h2>
+            <p>Total: 0</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Total Bin Cleaned</h2>
+            <p>Total: 0</p>
+        </div>
+    </div>
+
+    <script>
+        // You can add JavaScript logic here to fetch and update real-time data.
+        // For simplicity, this example uses static mock data.
+    </script>
+
+</body>
+</html>

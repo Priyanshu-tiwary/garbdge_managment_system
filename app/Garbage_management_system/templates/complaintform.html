@@ -1,0 +1,85 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form with Location</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: grey;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background:'C:\Users\anamika\Desktop\app\images\img.jpg';
+            backdrop-filter: blur(10px);
+            background-size: cover;
+            background-position: right;
+            
+        }
+        form {
+            background-color: brown;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- complaint_form.html -->
+
+<form id="complaintForm" enctype="multipart/form-data" action="{% url 'complaint_form' %}" method="post">
+    {% csrf_token %}
+    <center>
+        <h2>Complaint Form</h2>
+    </center>
+    <label for="name">Your Name*:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email*:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="Mobile Number">Mobile Number*:</label>
+    <input type="Mobile number" id="Mobile Number" name="mobile_number" required>
+
+    <label for="complaint">Complaint*:</label>
+    <textarea id="complaint" name="complaint" rows="4" required></textarea>
+
+    <label for="Address">Address*:</label>
+    <input type="Address" id="Address" name="address" required>
+
+    <label for="picture">Upload Picture*:</label>
+    <input type="file" id="picture" name="picture" accept="image/*">
+
+    <label for="location">Location*:</label>
+    <input type="text" id="location" name="location" placeholder="Enter Complaint Location" autocomplete="on" required>
+
+    <button type="submit">Submit Complaint</button>
+</form>
+
+</body>
+</html>
